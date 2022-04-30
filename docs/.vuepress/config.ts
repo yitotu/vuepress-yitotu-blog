@@ -34,10 +34,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           {
             text: '环境部署',
             items: [
-              { text: 'Centos7 Mysql8安装指南', link: '/pages/8143cc480faf9a11/' },
-              { text: 'Centos7 Nginx安装指南', link: '/pages/8143cc480faf9a12/' },
-              { text: 'Centos7 Rabbitmq安装指南', link: '/pages/8143cc480faf9a13/' },
-              { text: 'Centos7 Redis安装指南', link: '/pages/8143cc480faf9a14/' },
+
             ],
           },
         ],
@@ -100,7 +97,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // 文章默认的作者信息，(可在md文件中单独配置此信息) string | {name: string, link?: string}
     author: {
       name: 'yitotu', // 必需
-      link: 'https://github.com/xugaoyi', // 可选的
+      link: 'https://github.com/yitotu', // 可选的
     },
 
     // 博主信息 (显示在首页侧边栏)
@@ -117,12 +114,12 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         {
           iconClass: 'icon-youjian',
           title: '发邮件',
-          link: 'mailto:894072666@qq.com',
+          link: 'mailto:yitotu@yitotu.com',
         },
         {
           iconClass: 'icon-github',
           title: 'GitHub',
-          link: 'https://github.com/xugaoyi',
+          link: 'https://github.com/yitotu',
         },
         {
           iconClass: 'icon-erji',
@@ -147,8 +144,8 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       }
     },
 
-    // 自定义hmtl(广告)模块
-    htmlModules
+    // 自定义hmtl(广告)模块 公众号
+    // htmlModules
   },
 
   // 注入到页面<head>中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
@@ -248,26 +245,26 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         },
       },
     ],
-    // [
-    //   'vuepress-plugin-comment', // 评论
-    //   {
-    //     choosen: 'gitalk',
-    //     options: {
-    //       clientID: 'a6e1355287947096b88b',
-    //       clientSecret: 'f0e77d070fabfcd5af95bebb82b2d574d7248d71',
-    //       repo: 'blog-gitalk-comment', // GitHub 仓库
-    //       owner: 'xugaoyi', // GitHub仓库所有者
-    //       admin: ['xugaoyi'], // 对仓库有写权限的人
-    //       // distractionFreeMode: true,
-    //       pagerDirection: 'last', // 'first'正序 | 'last'倒序
-    //       id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
-    //       title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
-    //       labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
-    //       body:
-    //         '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
-    //     },
-    //   },
-    // ],
+    [
+      'vuepress-plugin-comment', // 评论
+      {
+        choosen: 'gitalk',
+        options: {
+          clientID: 'b72f39c18e8d8d7a8f4b',
+          clientSecret: '7caddc4b7ab4f8a117cb051e727e2120f0080237',
+          repo: 'blog-git-talk', // GitHub 仓库
+          owner: 'yitotu', // GitHub仓库所有者
+          admin: ['yitotu'], // 对仓库有写权限的人
+          // distractionFreeMode: true,
+          pagerDirection: 'last', // 'first'正序 | 'last'倒序
+          id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
+          title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
+          labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
+          body:
+            '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
+        },
+      },
+    ],
     [
       '@vuepress/last-updated', // "上次更新"时间格式
       {
