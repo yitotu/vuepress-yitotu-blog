@@ -55,10 +55,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       },
     ],
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
-    logo: '/img/logo.png', // 导航栏logo
+    logo: 'https://cdn.jsdelivr.net/gh/yitotu/pic_library/images20220501122220.png', // 导航栏logo
     repo: 'yitotu', // 导航栏右侧生成Github链接
     searchMaxSuggestions: 10, // 搜索结果显示最大数
-    lastUpdated: 'false', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
+    lastUpdated: 'true', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
     docsDir: 'docs', // 编辑的文件夹
     editLinks: false, // 启用编辑
     editLinkText: '编辑',
